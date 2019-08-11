@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  role_name: golang
   author: Garrett Hyde
   description: Install and configure Go on Fedora
   issue_tracker_url: https://github.com/ghyde/ansible-role-golang/issues
