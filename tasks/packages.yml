@@ -1,5 +1,7 @@
 ---
 - name: install Go packages
-  shell: go get {{ item }}
+  shell: go get {{ item.name }}
+  args:
+    creates: "{{ item.created_file }}"
   loop: "{{ go_install_packages }}"
 ...
