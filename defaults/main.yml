@@ -4,4 +4,3 @@ go_install_packages: []
 go_user_gopath: "{{ ansible_user_dir }}/go"
 go_os_output_gopath: 1
 ...
-
