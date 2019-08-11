@@ -41,4 +41,4 @@ listed in `go_install_packages`. However, these tasks are not executed by defaul
 License
 -------
 
-MIT
+[MIT](LICENSE)
