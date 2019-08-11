@@ -1,0 +1,25 @@
+---
+- name: install Go programming language
+  dnf:
+    name: golang
+    state: present
+  become: yes
+  become_user: root
+
+- name: create directory for Go packages
+  file:
+    path: "{{ go_user_gopath }}"
+    state: directory
+
+- name: create Go environment variable file
+  template:
+    src: bashrc_golang.j2
+    dest: "{{ ansible_user_dir }}/.bashrc_golang"
+
+- name: source Go environment variables
+  lineinfile:
+    dest: "{{ ansible_user_dir }}/.bashrc"
+    state: present
+    line: "source ~/.bashrc_golang"
+    insertafter: EOF
+...

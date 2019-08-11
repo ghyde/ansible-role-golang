@@ -1,0 +1,5 @@
+---
+- name: install Go packages
+  shell: go get {{ item }}
+  loop: "{{ go_install_packages }}"
+...
