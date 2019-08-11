@@ -32,6 +32,12 @@ Including an example of how to use your role (for instance, with variables passe
           created_file: "{{ go_user_gopath}}/bin/dlv"
 ```
 
+Extra Tasks
+-----------
+
+[upgrade.yml](tasks/upgrade.yml) contains tasks for upgrading Go and packages
+listed in `go_install_packages`. However, these tasks are not executed by default.
+
 License
 -------
 

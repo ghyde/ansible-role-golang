@@ -1,0 +1,9 @@
+---
+- name: upgrade Go programming language
+  dnf:
+    name: golang
+    state: latest
+- name: upgrade Go packages
+  shell: go get -u {{ item.name }}
+  loop: "{{ go_install_packages }}"
+...
