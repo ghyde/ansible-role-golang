@@ -1,7 +1,9 @@
 ---
-- name: install Go programming language
+- name: install Go programming language packages
   dnf:
-    name: golang
+    name:
+      - golang
+      - dep
     state: present
   become: yes
   become_user: root
