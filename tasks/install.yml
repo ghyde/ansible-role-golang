@@ -1,12 +1,19 @@
 ---
-- name: install Go programming language packages
+- name: install Go programming language package
   dnf:
-    name:
-      - golang
-      - dep
+    name: golang
     state: present
   become: yes
   become_user: root
+- name: install Go dependency management tool
+  dnf:
+    name: dep
+    state: present
+  become: yes
+  become_user: root
+  when:
+    - ansible_distribution|string == "Fedora"
+    - ansible_distribution_major_version|int <= 32
 - name: create directory for Go packages
   file:
     path: "{{ go_user_gopath }}"

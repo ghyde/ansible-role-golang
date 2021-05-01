@@ -12,6 +12,9 @@ galaxy_info:
     - 28
     - 29
     - 30
+    - 31
+    - 32
+    - 33
   galaxy_tags:
   - development
   - golang
